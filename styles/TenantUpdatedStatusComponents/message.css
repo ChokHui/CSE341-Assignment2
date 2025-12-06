@@ -1,0 +1,40 @@
+.message {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.message__success {
+    color: rgb(79, 197, 79);
+    font-weight: 600;
+    font-size: var(--size-4xl);
+}
+
+.message__error {
+    color: red;
+    font-weight: bold;
+}
+
+.message__countdown {
+    font-size: var(--size-xl);
+}
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
