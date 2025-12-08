@@ -53,7 +53,6 @@
 				<?php } ?>
                 <div class="hero__half">
                     <p class="hero__subtitle" >Shop Name:</p>
-                    <!-- <input class="hero__input" type="text" placeholder="Trading Name" name="user"  id="user" required/> -->
                     <select class="hero__input hero__cursor" id="trading" name="trading">
                         <option value="">Select Shop Name</option>
                         <?php
@@ -70,7 +69,6 @@
                 </div>
                 <div class="hero__half">
                     <p class="hero__subtitle" >Lot No/Unit:</p>
-                    <!-- <input class="hero__input" type="text" placeholder="Lot No/Unit" name="user"  id="user" required/> -->
                     <select class="hero__input hero__cursor" id="lot" name="lot" disabled>
                         <option value="">Select trading name first</option>
                     </select>
@@ -98,7 +96,6 @@
                 </div>
                 <div class="hero__full">
                     <p class="hero__subtitle" >Details of Feedback:</p>
-                    <!-- <textarea id="details" name="details" rows="7" placeholder="Leave your message here..." maxlength="5000" style="width: 100%; height: auto; overflow: scroll" required></textarea> -->
                     <textarea class="hero__input hero__feedback" id="details" name="details" placeholder="Leave your message here..."required></textarea>
                 </div>
                 <div class="hero__attachments">

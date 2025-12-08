@@ -2,7 +2,6 @@
 	session_start();
 	require ('dbconfig.php');
 		
-	// if (isset($_POST['reportNo'])) {
 		// Check connection
 		if ($connect->connect_error) {
 			die("Connection failed: " . $connect->connect_error);
@@ -25,8 +24,6 @@
 			// Execute statement
 			$stmt->execute();
 			$result = $stmt->get_result();
-			
-			// $stylesheet = "style.css";
 			
 			// Check if any rows were returned
 			if ($result->num_rows > 0) {

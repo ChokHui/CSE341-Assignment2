@@ -6,7 +6,6 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php'; 
 require 'phpmailer/src/SMTP.php'; 
 
-// if(isset($_POST["send"])){ 
 $mail = new PHPMailer(true); 
 
 // If upload button is clicked ... 
@@ -47,8 +46,6 @@ if (isset($_POST['Submit'])) {
             $row = mysqli_fetch_assoc($result); 
             $tradingName = $row['tradingName']; 
             
-            // $reportNo = $row['reportNo']; 
-            
             // Prepare the INSERT statement 
             $sql = "INSERT INTO feedback (reportNo, tradingName, lotNo, email, contactNo, complaintCat, details, attach1, attach2, attach3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; 
             $stmt = mysqli_prepare($connect, $sql); 
@@ -77,7 +74,6 @@ if (isset($_POST['Submit'])) {
                     if ($reportNoFromDB) { 
                         // Use the retrieved reportNo in the email subject 
                         $mail->Subject = "Your feedback has been successfully submitted. Here is your Form No: " . $reportNoFromDB; 
-                        // $mail->Subject = "This is a testing email" . $reportNoFromDB; 
                     } else { 
                         echo "Failed to retrieve reportNo from the database."; 
                     } 
@@ -94,7 +90,6 @@ if (isset($_POST['Submit'])) {
             // Close the prepared statement 
             mysqli_stmt_close($stmt); 
         } else { 
-            // echo "Invalid trading selected."; 
             echo "Failed: " . mysqli_error($connect); 
         } 
     } 
